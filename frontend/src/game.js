@@ -53,14 +53,13 @@ class Game {
        
         const choice1Card = document.getElementById(prevId);
         const choice2Card = document.getElementById(currId);
-        const choice1Class = document.getElementById(prevId).getElementsByClassName('toggle')
-        const choice2Class = document.getElementById(currId).getElementsByClassName('toggle').querySelector('img')
-        // const choice1Class = document.getElementById(prevId).getAttribute('src')
-        // const choice2Class = document.getElementById(currId).getAttribute('src')
-        // const choice1Class = document.getElementById(prevId).getElementsByClassName('toggle')[0].classList[1];
-        // const choice2Class = document.getElementById(currId).getElementsByClassName('toggle')[0].classList[1];
-        this.trackMoves();  
+        // const choice1Class = document.getElementById(prevId).getElementsByClassName('toggle')
+        // const choice2Class = document.getElementById(currId).getElementsByClassName('toggle')
+        const choice1Class = document.getElementById(prevId).querySelector('img').src
+        const choice2Class = document.getElementById(currId).querySelector('img').src
        
+        this.trackMoves();  
+      
         if (choice1Class === choice2Class) {
             this.correct++;
             this.showScore();

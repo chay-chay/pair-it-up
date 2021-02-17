@@ -17,7 +17,7 @@ body {
 }
 
 body {
-  background: #ffffff url('../img/geometry2.png');
+  background: #bde7e2 
   /* Background pattern from Subtle Patterns */
   font-family: 'Coda', cursive;
 }
@@ -39,18 +39,6 @@ h1 {
 .score-container {
   font-size: 1.5em;
 }
-
-
-/* @media screen and (max-width: 767px) {
-  .deck {
-      min-height: 400px !important;
-      width: 90% !important;
-  }
-  .card {
-      height: 50px !important;
-      width: 50px !important;
-  }
-} */
 
 /*
 * Styles for the deck of cards
