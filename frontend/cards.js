@@ -19,7 +19,7 @@ class CardManager {
         console.log(this.cards)
     }
 
-
+  
 }
 
 

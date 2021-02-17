@@ -1,3 +1,4 @@
+
 class Game {
     constructor() {
         this.cardClickCount = 0;
@@ -11,8 +12,3 @@ class Game {
     }
 
     
-
-
-}
-
-// const game = new Game();

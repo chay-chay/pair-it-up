@@ -14,11 +14,24 @@
 </head>
 
 <body class="text-center">
-
+   
     <div class="container-fluid">
+      
         <header>
             <h1>Pair it up!</h1>
         </header>
+       
+        <!-- First Page-->
+
+        <div id="myWelcomeModal" class="welcome-modal">
+            <div class="welcome-modal-content">
+                <span class="close" id='welcome-close'>&times;</span>
+                <div id="welcome-modal-header">Welcome!</div>
+                <p > </p>
+            </div>
+        </div>
+       
+            <!-- second page-->
 
         <section class="score-panel">
             <div class="score-container d-flex justify-content-around">
@@ -116,6 +129,7 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="src/welcome.js"></script>
     <script type="text/javascript" src="cards.js"></script>
     <script type="text/javascript" src="src/data.js"></script>
     <script type="text/javascript" src="src/game.js"></script>
