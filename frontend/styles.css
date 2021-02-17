@@ -69,6 +69,7 @@ h1 {
 
 }
 
+
 .deck .card {
 
   height: 100px;
@@ -84,6 +85,14 @@ h1 {
   cursor: pointer;
 
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card img{
+  display:none;
+}
+
+.deck .card.open img{
+  display: flex;
 }
 
 .deck .card.open {
@@ -106,18 +115,18 @@ h1 {
 * Styles for the Score Panel
 */
 
-
+/* 
 .score-panel .stars {
   margin: 0;
   padding: 0;
   display: inline-block;
   margin: 0 5px 0 0;
-}
+} */
 
-.score-panel .stars li {
+/* .score-panel .stars li {
   list-style: none;
   display: inline-block;
-}
+} */
 
 .score-panel .restart {
   float: right;
@@ -185,3 +194,10 @@ img{
   height: 80px;
 
 }
+
+
+
+
+/* .toggle{
+  display: none;
+} */
