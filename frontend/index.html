@@ -56,7 +56,6 @@
         <div class="deck row" >
             <div id="1" class="col-2 card">
                 <img class="toggle" >
-            
                 
             </div>
             <div id="2" class="col-2 card">
@@ -128,18 +127,18 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLongTitle">Congratulations!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
                     <h6>.</h6>
                     <p>Would you like to submit your name?</p>
+                    <input type="text" id="name" placeholder="Put your name here...(optional)" />
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary play-again">Submit </button>
-                  <button type="button" class="btn btn-primary play-again">Submit </button>
+                  <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary submit">Submit </button>
                 </div>
               </div>
             </div>
@@ -147,11 +146,23 @@
     </div>
 
 
-    <div class="hidden">
-
-
+    <div id="rank" class="column absolute" style="display:none">
+        <table class="scroll">
+            <thead>
+                <tr>
+                    <th>RANK</th>
+                    <th>NAME</th>
+                    <th>SCORE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- SCORES -->
+            </tbody>
+        </table>
+        <button id="restart" class="restart btn">
+            PLAY AGAIN
+        </button>
     </div>
-
 
     
     <script type="text/javascript" src="src/welcome.js"></script>
