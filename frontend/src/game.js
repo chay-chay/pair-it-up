@@ -43,11 +43,7 @@ class Game {
         });
     }
 
-    onRestart() {
-        const button = document.querySelector('.restart');
-
-        button.addEventListener('click', () => this.restart());
-    }
+   
 
     checkMatch(prevId, currId) {
        
@@ -98,52 +94,55 @@ class Game {
         }, 1000);
     }
 
+    onRestart() {
+        const button = document.querySelector('.restart');
+
+        button.addEventListener('click', () => this.restart());
+    }
+
     restart() {
         this.seconds = 0;
         this.moves = 0;
         this.correct = 0;
-        this.starIdx = 5;
         this.cardClickCount = 0;
         this.showMoves();
         this.previousId = null;
         $('#winModal').modal('hide');
 
         const cardList = document.querySelector('.deck').getElementsByTagName('div');
-       
 
         for (let card of cardList) {
             card.classList.remove('show', 'open');
         }
-
-        // for (let star of starList) {
-        //     star.style.display = 'inline';
-        // }
     }
 
     showScore() {
         if (this.correct === 8) {
+            
             setTimeout(() => {
-                const winString = `You win. You took ${this.seconds} seconds. 
-                Would you like to play again?`
+                $('#winModal').modal('show');
+                // const winModal = document.getElementById('winModal')
+                // winModal.style.display = 'flex';
+                const winString = `Yay! You win! You took ${this.moves} moves.`
 
-                const modalBody = document.querySelector('.modal-body');
-                modalBody.innerHTML = winString;
-                this.promptReplay();
+                const modalText = document.querySelector('.modal-body').querySelector('h6');
+                modalText.innerHTML = winString;
+                // this.promptReplay();
              
                 
-                $('#winModal').modal('show');
+               
             }, 500);
 
         }
     }
 
-    promptReplay() {
-        const playAgain = document.querySelector('.play-again');
+    // promptReplay() {
+    //     const playAgain = document.querySelector('.play-again');
 
-        playAgain.addEventListener('click', () => {
-            this.restart();
-        })
-    }
+    //     playAgain.addEventListener('click', () => {
+    //         this.restart();
+    //     })
+    // }
 
 
 }
