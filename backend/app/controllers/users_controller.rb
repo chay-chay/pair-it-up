@@ -8,11 +8,11 @@ class UsersController < ApplicationController
         user = User.create(name: params[:name])
         user.scores.build(number: params[:number])
         user.save
-        render json: UserSerializer.new(users)
+        render json: UserSerializer.new(user)
     end
 
     def show
         user = User.find_by(id: params[:id])
-        render json: UserSerializer.new(users)
+        render json: UserSerializer.new(user)
     end
 end

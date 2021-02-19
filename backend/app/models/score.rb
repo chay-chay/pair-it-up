@@ -3,7 +3,7 @@ class Score < ApplicationRecord
 belongs_to :user
 validates :number, presence: true
 
-scope :topten, -> { order('number desc').limit(10) }
+scope :topten, -> { order('number ASC').limit(10) }
 
 def self.topten_scores
   top_ten = Score.topten
