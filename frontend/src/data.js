@@ -5,13 +5,13 @@ class Data {
   }
 
   submit() {
-    $("#winModal").modal("show");
+    // $("#winModal").modal("show");
     const submit = document.querySelector('.submit');
     submit.addEventListener("click", () => this.handleSubmit());
   }
 
   handleSubmit(){
-    // console.log(`${this.BASE_URL}/topten`)
+    console.log(`${this.BASE_URL}/topten`)
   document.querySelector('#name').value
   this.getUser();
   this.getRanks();
@@ -42,20 +42,28 @@ class Data {
       this.getScore(data)}));
   }
 
+
+
   getScore(scores){
+
     console.log(scores)
     scores.forEach(e => {
-      let html = `
+       
+      let html = document.querySelector('#rank').querySelector('.scroll').querySelector('tbody')
+      html.innerHTML +=
+      `
        <tr>
           <td>${e.rank}</td>
-           <td>${e.username}</td>
-           <td>${e.num}</td>
+           <td>${e.name}</td>
+           <td>${e.number}</td>
        </tr>
       `
-      $('#rank table tbody').innerHTML += html;
-      
+     
+      $("#winModal").modal("hide");
+      document.querySelector('.deck').style.display = 'none'
       document.querySelector('#rank').style.display = 'block'
-      document.querySelector('#deck').style.display = 'block'
+      
+      
       });
   
     // const scoresArray = data
