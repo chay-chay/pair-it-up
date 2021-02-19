@@ -78,6 +78,7 @@ class Game {
   }
 
   startTimer(status) {
+      
     const timer = document.querySelector(".timer");
     this.timer = setInterval(() => {
       this.seconds++;

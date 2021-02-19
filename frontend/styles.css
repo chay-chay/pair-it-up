@@ -17,18 +17,18 @@ body {
 }
 
 body {
-  background: #bde7e2 
+  background: #f8dde8 
   /* Background pattern from Subtle Patterns */
-  font-family: 'Coda', cursive;
+  /* font-family: 'Coda', cursive; */
 }
-
+/* 
 
 @media only screen and (min-width: 1440px) {
   .card {
       margin-top: 2%;
   }
   
-}
+} */
 
 
 h1 {
@@ -40,12 +40,14 @@ h1 {
   font-size: 1.5em;
 }
 
-/*
-* Styles for the deck of cards
-*/
+/*  Styles for the deck of cards  */
+
+img{
+  width:80px;
+  height: 80px;
+}
 
 .deck {
-
   justify-content: center;
   padding: 2%;
   align-items: center;
@@ -53,15 +55,13 @@ h1 {
   background: url('image/bg2.jpg');
   /* background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%); */
   border-radius: 50px;
-  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  box-shadow: 12px 15px 20px 0 rgba(212, 137, 178, 0.5);
 
 }
 
 
 .deck .card {
-
   height: 100px;
-
   margin-right: 5%;
   display: flex;
   justify-content: center;
@@ -71,7 +71,6 @@ h1 {
   color: #ffffff;
   border-radius: 8px;
   cursor: pointer;
-
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
@@ -99,9 +98,12 @@ h1 {
   font-size: 33px;
 }
 
-/*
-* Styles for the Score Panel
-*/
+/* Styles for the Score Panel */
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
 
 /* 
 .score-panel .stars {
@@ -116,10 +118,6 @@ h1 {
   display: inline-block;
 } */
 
-.score-panel .restart {
-  float: right;
-  cursor: pointer;
-}
 
 
 /* welcome modal */
@@ -174,25 +172,16 @@ h1 {
 
 .close:hover {
   cursor: pointer;
- 
 }
-
-img{
-  width:80px;
-  height: 80px;
-
-}
-
-
 
 
 /* .toggle{
   display: none;
 } */
 
-
+/* rank */
 #rank {
-
+  text-align:center;
   justify-content: center;
   padding: 2%;
   align-items: center;
