@@ -5,9 +5,10 @@ let welcomeCloseButton = document.getElementById('welcome-close')
 welcomeCloseButton.addEventListener('click', welcomeClose)
 function welcomeClose(e){
     // console.log(e.target);
-
     welcomeModal.style.display = "none";
+    game.start();
 }
+
 
 
 

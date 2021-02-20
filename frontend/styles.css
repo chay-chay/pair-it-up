@@ -1,4 +1,6 @@
 html {
+  font-family: 'Comfortaa', cursive;
+  
   box-sizing: border-box;
 }
 
@@ -32,12 +34,16 @@ body {
 
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  padding-top: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 500;
+  color:rgb(235, 104, 154)
 }
 
 .score-container {
+  font-family: 'Comfortaa', cursive;
   font-size: 1.5em;
+  color:rgb(235, 104, 154);
 }
 
 /*  Styles for the deck of cards  */
@@ -123,6 +129,8 @@ img{
 /* welcome modal */
 
 .welcome-modal {
+  font-family: 'Comfortaa', cursive;
+  font-size: larger;
   display: block;
   /* Hidden by default */
   position: fixed;
@@ -144,16 +152,17 @@ img{
 }
 
 .welcome-modal-content {
-  background-color: #fefefe;
+  background: url('image/bg3.jpg');
+  /* background-color: #fefefe; */
   margin: 15% auto;
-  font-family: 'Bowreghul';
+  font-family: 'Comfortaa', cursive;
   text-align: center;
   padding: 20px;
   border: 1px solid #888;
   width: 700px;
   height: 500px;
   color: #e9a7d0;
-  font-size: x-small;
+  font-size:large;
 }
 
 #welcome-modal-header {
@@ -161,8 +170,9 @@ img{
   top: 0;
   left: 0; */
   /* height: 15%; */
+  font-family: 'Comfortaa', cursive;
   width: 100%;
-  font-family: 'Bowreghul';
+  /* font-family: 'Bowreghul'; */
   /* padding: 10px; */
   text-align: center;
   font-size: 8vh;

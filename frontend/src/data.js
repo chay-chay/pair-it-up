@@ -2,6 +2,8 @@ class Data {
   constructor() {
     this.BASE_URL = "http://localhost:3000";
     this.submit;
+    this.restartButton();
+    
   }
 
   submit() {
@@ -28,7 +30,7 @@ class Data {
         body: JSON.stringify(data),
       })
         .then((response) => response.json())
-        // .then((response) => console.log(response))
+        .then((response) => console.log(response))
         .catch((error) => {
           console.error("Error:", error);
         })
@@ -42,7 +44,7 @@ class Data {
     if (name != "") {
       const data = { name: name, number: moves.innerText };
       this.createUser(data);
-    }
+    } 
   }
 
   getRanks() {
@@ -70,11 +72,27 @@ class Data {
       `;
       
       $("#winModal").modal("hide");
+      
       document.querySelector(".deck").style.display = "none";
       document.querySelector("#rank").style.display = "block";
-    });
+    })
+  };
+
+  restartButton(){
+    const restart = document.querySelector('#restart')
+    restart.addEventListener("click", () => this.playAgain());
 
   }
+  playAgain(){
+    
+    document.querySelector("#rank").style.display = "none";
+    document.querySelector(".deck").style.display = "flex";
+    
+    game.restart();
+    
+  }
+  
+
 }
 // const scoresArray = data
 // let li = document.createElement('li')
@@ -89,6 +107,8 @@ class Data {
 
 let data = new Data();
 data.submit();
+
+
 
 // let submit = document.querySelector('.submit')
 // submit.addEventListener('click', handleSubmit);
