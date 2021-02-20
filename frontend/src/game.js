@@ -21,6 +21,7 @@ class Game {
   }
 
   onClick() {
+    
     const deck = document.querySelector(".deck");
 
     deck.addEventListener("click", (event) => {
@@ -78,7 +79,7 @@ class Game {
   }
 
   startTimer(status) {
-      
+     
     const timer = document.querySelector(".timer");
     this.timer = setInterval(() => {
       this.seconds++;
@@ -114,7 +115,7 @@ class Game {
     if (this.correct === 8) {
       setTimeout(() => {
         $("#winModal").modal("show");
-        
+        clearInterval(this.timer);
         // const winModal = document.getElementById('winModal')
         // winModal.style.display = 'flex';
         const winString = `Yay! You win! You took ${this.moves} moves.`;

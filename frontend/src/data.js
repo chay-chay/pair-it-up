@@ -89,6 +89,7 @@ class Data {
     document.querySelector(".deck").style.display = "flex";
     
     game.restart();
+    game.startTimer() 
     
   }
   

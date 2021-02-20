@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  background: #f8dde8 
+  background: #f0dae2 
   /* Background pattern from Subtle Patterns */
   /* font-family: 'Coda', cursive; */
 }
@@ -69,6 +69,7 @@ img{
 .deck .card {
   height: 100px;
   margin-right: 5%;
+  margin-bottom: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
