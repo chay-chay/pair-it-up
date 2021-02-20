@@ -21,7 +21,7 @@ class Game {
   }
 
   onClick() {
-    
+  
     const deck = document.querySelector(".deck");
 
     deck.addEventListener("click", (event) => {

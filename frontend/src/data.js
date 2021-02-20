@@ -63,6 +63,7 @@ class Data {
         .querySelector("#rank")
         .querySelector(".scroll")
         .querySelector("tbody");
+       
       html.innerHTML += `
        <tr>
           <td>${e.rank}</td>
