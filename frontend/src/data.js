@@ -15,8 +15,8 @@ class Data {
   handleSubmit() {
     console.log(`${this.BASE_URL}/topten`);
     this.submitData();
-    this.createUser();
-    this.getRanks();
+    // this.createUser();
+    // this.getRanks();
   }
 
   createUser(data) {
@@ -30,11 +30,17 @@ class Data {
         body: JSON.stringify(data),
       })
         .then((response) => response.json())
-        .then((response) => console.log(response))
+        .then((response) => {
+          console.log(response)
+          this.getRanks();
+       })
+        
         .catch((error) => {
           console.error("Error:", error);
         })
+        
     );
+    
   }
 
   submitData() {
@@ -44,6 +50,7 @@ class Data {
     if (name != "") {
       const data = { name: name, number: moves.innerText };
       this.createUser(data);
+     
     } 
   }
 
@@ -63,7 +70,7 @@ class Data {
         .querySelector("#rank")
         .querySelector(".scroll")
         .querySelector("tbody");
-       
+      
       html.innerHTML += `
        <tr>
           <td>${e.rank}</td>
@@ -91,7 +98,11 @@ class Data {
     
     game.restart();
     game.startTimer() 
-    
+    let rank = document
+        .querySelector("#rank")
+        .querySelector(".scroll")
+        .querySelector("tbody");
+    rank.innerHTML = ""
   }
   
 

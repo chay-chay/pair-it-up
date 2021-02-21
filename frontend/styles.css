@@ -33,21 +33,28 @@ body {
   
 } */
 
-
 h1 {
-  padding-top: 30px;
+  padding-top: 20px;
   font-family: 'Comfortaa', cursive;
   font-weight: bolder;
   color: #f55195;
+  text-shadow: 3px 2px #f5b6cf;
+  /* color: #f5b6cf; */
   /* color:rgb(235, 104, 154) */
 }
 
-.score-container {
-  font-family: 'Comfortaa', cursive;
-  font-size: 1.5em;
-  color: rgb(70, 68, 68);
-  /* color:rgb(235, 104, 154); */
-}
+/* .head-div{
+  background-color: #d1f1f0;
+  text-align: center;
+  border-radius: 25px;
+  width: 280px;
+  height: 110px;
+  border: 5px solid #f5b6cf;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  
+} */
 
 /*  Styles for the deck of cards  */
 
@@ -96,6 +103,8 @@ img.wel{
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
+
+
 .deck .card img{
   display:none;
 }
@@ -110,7 +119,7 @@ img.wel{
   cursor: default;
 }
 
-.deck .card.show {
+/* .deck .card.show {
   font-size: 33px;
 }
 
@@ -118,7 +127,7 @@ img.wel{
   cursor: default;
   background: #cd77e7;
   font-size: 33px;
-}
+} */
 
 /* Styles for the Score Panel */
 
@@ -127,19 +136,13 @@ img.wel{
   cursor: pointer;
 }
 
-/* 
-.score-panel .stars {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  margin: 0 5px 0 0;
-} */
 
-/* .score-panel .stars li {
-  list-style: none;
-  display: inline-block;
-} */
-
+.score-container {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.3em;
+  color: rgb(70, 68, 68);
+  /* color:rgb(235, 104, 154); */
+}
 
 
 /* welcome modal */
@@ -204,6 +207,7 @@ img.wel{
 
 .close:hover {
   cursor: pointer;
+  
 }
 
 
@@ -215,12 +219,11 @@ img.wel{
 #rank {
   text-align:center;
   justify-content: center;
-  padding: 2%;
+  padding: 1%;
   align-items: center;
   min-height: 30em;
   /* background: url('image/unicorn.jpg'); */
   background: url('image/bg.jpg');
-
   border-radius: 50px;
   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
 
@@ -233,9 +236,7 @@ img.wel{
      margin-left: auto;
      margin-right: auto;
      width: 50%;
-     table-layout: fixed;
-     
-     
+     table-layout: fixed;  
 }
 /* tbody{
   width: 100%;
@@ -248,7 +249,7 @@ img.wel{
 
 th{
   color: #f55195;
-  font-size: x-large;
+  font-size: large;
   font-weight: 500;
 }
 
@@ -256,7 +257,7 @@ tbody tr td{
   border-radius: 50px;
   height: 45px;
   color: rgb(70, 68, 68);
-  font-size: large;
+  font-size: medium;
   padding: 0.2rem;
   text-align: center;
 } 
