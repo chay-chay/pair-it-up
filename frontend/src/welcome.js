@@ -7,7 +7,7 @@ function welcomeClose(e){
     // console.log(e.target);
     welcomeModal.style.display = "none";
     game.start();
-    $("#winModal").modal("show");
+    // $("#winModal").modal("show"); // use for shortcut to fix bug
 }
 
 
