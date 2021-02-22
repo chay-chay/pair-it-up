@@ -8,13 +8,14 @@ Pair It Up! is a matching game where players compete to see if they can make mat
 
 ## Installation
 
+
 ## Get started!
 
 
 ## My blog & Walkthrough video
 
-If you would like to check my blog, here is [My Blog]() and [Walkthrough video]()
-    I 
+If you would like to check my blog, here is [My Blog]() and [Walkthrough video](https://youtu.be/M26lT_x6ADs)
+    
 ## Contributors 
 
 This is my fourth project for Flatiron. If you're interested in my code, please feel free to contact me at [chayanit.chaisri@gmail.com](mailto:chayanit.chaisri@gmail.com)
