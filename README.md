@@ -16,7 +16,7 @@ Click on the link to run the live game [heroku] *need to upload on Heroku after 
 
 ## My blog & Walkthrough video
 
-If you would like to check my blog, here is [My Blog]() and [Walkthrough video](https://youtu.be/M26lT_x6ADs)
+If you would like to check my blog, here is [My Blog](https://chayanit-chaisri.medium.com/how-to-input-and-display-data-from-javascript-and-rails-94fdbe0ca614) and [Walkthrough video](https://youtu.be/M26lT_x6ADs)
     
 ## Contributors 
 
