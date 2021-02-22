@@ -4,14 +4,13 @@
 
 Pair It Up! is a matching game where players compete to see if they can make matches in the fewest number of moves. When pairs are created, they remain flipped. When all the cards are flipped, the game is over. The player has the option of recording their score. If their score is in the top ten, it will be shown on the board at the end of the game.
 
+
+# Rules of the game
+
 <img width="1251" alt="welcome" src="https://user-images.githubusercontent.com/72841865/108662431-4ff35780-749c-11eb-9253-c339fb03e76d.png">
 
-
-
-## Installation
-
-
 ## Get started!
+
 
 
 ## My blog & Walkthrough video
