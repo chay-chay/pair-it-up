@@ -1,6 +1,5 @@
 const welcomeModal = document.getElementById("myWelcomeModal")
-const wordControlButtons = document.getElementById('word-control-buttons')
-let welcomeCloseButton = document.getElementById('welcome-close')
+const welcomeCloseButton = document.getElementById('welcome-close')
 
 welcomeCloseButton.addEventListener('click', welcomeClose)
 function welcomeClose(e){

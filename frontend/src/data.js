@@ -89,10 +89,9 @@ class Data {
   restartButton(){
     const restart = document.querySelector('#restart')
     restart.addEventListener("click", () => this.playAgain());
-
   }
+
   playAgain(){
-    
     document.querySelector("#rank").style.display = "none";
     document.querySelector(".deck").style.display = "flex";
     
@@ -105,8 +104,20 @@ class Data {
     rank.innerHTML = ""
   }
   
-
 }
+
+let data = new Data();
+data.submit();
+
+
+
+
+
+
+
+
+
+
 // const scoresArray = data
 // let li = document.createElement('li')
 // li.innerText = m['']
@@ -118,8 +129,7 @@ class Data {
 //   return li;
 //   })
 
-let data = new Data();
-data.submit();
+
 
 
 
