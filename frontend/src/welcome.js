@@ -12,15 +12,3 @@ function welcomeClose(e){
 
 
 
-// scoreCloseButton.onclick = function(e) {
-//     modal.style.display = "none"
-// }
-
-// window.onclick = function(e) {
-//     console.log(e.target === welcomeModal)
-//     if (e.target === welcomeModal) {
-//         welcomeModal.style.display = "none";
-//     }
-//     if (e.target === modal) {
-//         modal.style.display = "none";
-//     }

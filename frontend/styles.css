@@ -1,5 +1,5 @@
 html {
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', sans-serif; */
   box-sizing: border-box;
 }
 
@@ -11,7 +11,7 @@ html {
 
 html,
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', sans-serif;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -24,18 +24,11 @@ body {
   /* Background pattern from Subtle Patterns */
   /* font-family: 'Coda', cursive; */ 
 }
-/* 
 
-@media only screen and (min-width: 1440px) {
-  .card {
-      margin-top: 2%;
-  }
-  
-} */
 
 h1 {
   padding-top: 20px;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', sans-serif; */
   font-weight: bolder;
   color: #f55195;
   text-shadow: 3px 2px #f5b6cf;
@@ -148,7 +141,7 @@ img.wel{
 /* welcome modal */
 
 .welcome-modal {
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
   font-size: larger;
   display: block;
   /* Hidden by default */
@@ -180,7 +173,7 @@ img.wel{
   /* background: url('image/bg3.jpg'); */
   background-color: #fefefe;
   margin: 15% auto;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
   text-align: center;
   padding: 20px;
   border: 1px solid #888;
@@ -195,7 +188,7 @@ img.wel{
   top: 0;
   left: 0; */
   /* height: 15%; */
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
   width: 100%;
   /* font-family: 'Bowreghul'; */
   /* padding: 10px; */

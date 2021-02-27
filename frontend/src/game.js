@@ -131,21 +131,14 @@ class Game {
       }, 500);
     }
   }
+
   close(){
       const winModalEnd = document.querySelector('#winModal')
       winModalEnd.style.display = "none";
   }
 }
 
-// promptReplay() {
-//     const playAgain = document.querySelector('.play-again'); // change to submit
 
-//     playAgain.addEventListener('click', () => {
-//         this.restart();
-//     })
-// }
-
-// }
 
 const game = new Game();
 // game.start();
