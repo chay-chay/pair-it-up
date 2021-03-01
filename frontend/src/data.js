@@ -6,29 +6,39 @@ class Data {
   }
 
   submit() {
-    // $("#winModal").modal("show");
+    // $("#winModal").modal("show"); // user for debug
     const submit = document.querySelector(".submit");
     submit.addEventListener("click", () => this.handleSubmit());
   }
 
   handleSubmit() {
     console.log(`${this.BASE_URL}/topten`);
-    this.submitData();
+    const name = document.querySelector("#name").value;
+    const moves = document.querySelector(".moves");
+
+    if (name != "") {
+      const data = { name: name, number: moves.innerText };
+      this.createUser(data);
+     
+    } 
+    // this.submitData();
     // this.createUser();
     // this.getRanks();
   }
+
 
   createUser(data) {
     return (
       fetch(`${this.BASE_URL}/users`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+        headers: { // Headers — Additional metadata passed to the API to help the server(tell inf about body)
+          "Content-Type": "application/json", // Indicates the media type of the resource.
+          Accept: "application/json", // Informs the server about the types of data that can be sent back.
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data), // actual content 
       })
-        .then((response) => response.json())
+
+        .then((response) => response.json()) // making asynchronous calls 
         .then((response) => {
           console.log(response)
           this.getRanks();
@@ -42,19 +52,9 @@ class Data {
     
   }
 
-  submitData() {
-    const name = document.querySelector("#name").value;
-    const moves = document.querySelector(".moves");
-
-    if (name != "") {
-      const data = { name: name, number: moves.innerText };
-      this.createUser(data);
-     
-    } 
-  }
-
+  
   getRanks() {
-    return fetch(`${this.BASE_URL}/topten`)
+    return fetch(`${this.BASE_URL}/topten`) // make get request to a server and get back response
       .then((response) => response.json())
       .then((data) => {
         console.log(this);
@@ -65,10 +65,7 @@ class Data {
   getScore(scores) {
     console.log(scores);
     scores.forEach((e) => {
-      let html = document
-        .querySelector("#rank")
-        .querySelector(".scroll")
-        .querySelector("tbody");
+      let html = document.querySelector("#rank").querySelector(".scroll").querySelector("tbody");
       
       html.innerHTML += `
        <tr>
@@ -93,13 +90,10 @@ class Data {
   playAgain(){
     document.querySelector("#rank").style.display = "none";
     document.querySelector(".deck").style.display = "flex";
-    
+  
     game.restart();
     game.startTimer() 
-    let rank = document
-        .querySelector("#rank")
-        .querySelector(".scroll")
-        .querySelector("tbody");
+    let rank = document.querySelector("#rank").querySelector(".scroll").querySelector("tbody");
     rank.innerHTML = ""
   }
   

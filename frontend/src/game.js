@@ -2,18 +2,16 @@ class Game {
   constructor() {
     this.cardClickCount = 0;
     this.seconds = 0;
-    this.timer;
     this.moves = 0;
     this.correct = 0;
-    this.wrongMoves = 0;
-    this.ended = false;
+    this.timer;
     this.cardManager = new CardManager();
   }
 
   start() {
     this.cardManager.generateCards();
     this.cardManager.shuffleCards();
-    this.cardManager.attachClassToCard();
+    this.cardManager.attachSrcToCard();
     this.startTimer();
     this.showMoves();
     this.onRestart();
@@ -30,7 +28,7 @@ class Game {
 
         event.target.classList.add("show", "open");
         this.cardClickCount++;
-
+        
         if (this.cardClickCount % 2 === 0) {
           this.checkMatch(this.previousId, event.target.id);
         } else {
@@ -41,14 +39,15 @@ class Game {
   }
 
   checkMatch(prevId, currId) {
+    
     const choice1Card = document.getElementById(prevId);
     const choice2Card = document.getElementById(currId);
+    // debugger
     // const choice1Class = document.getElementById(prevId).getElementsByClassName('toggle')
     // const choice2Class = document.getElementById(currId).getElementsByClassName('toggle')
-    const choice1Class = document.getElementById(prevId).querySelector("img")
-      .src;
+    const choice1Class = document.getElementById(prevId).querySelector("img").src;
     const choice2Class = document.getElementById(currId).querySelector("img")
-      .src;
+.src;
 
     this.trackMoves();
 
@@ -58,7 +57,7 @@ class Game {
       this.showMoves();
       return;
     } else {
-      this.wrongMoves++;
+      // this.wrongMoves++;
       this.showMoves();
 
       setTimeout(() => {
@@ -74,22 +73,19 @@ class Game {
 
   showMoves() {
     const moves = document.querySelector(".moves");
-
     moves.innerHTML = this.moves;
   }
 
   startTimer(status) {
-     
-    const timer = document.querySelector(".timer");
+    const timer1 = document.querySelector(".timer");
     this.timer = setInterval(() => {
       this.seconds++;
-      timer.innerHTML = this.seconds;
+      timer1.innerHTML = this.seconds;
     }, 1000);
   }
 
   onRestart() {
     const button = document.querySelector(".restart");
-
     button.addEventListener("click", () => this.restart());
   }
 
@@ -102,9 +98,7 @@ class Game {
     this.previousId = null;
     $("#winModal").modal("hide");
 
-    const cardList = document
-      .querySelector(".deck")
-      .getElementsByTagName("div");
+    const cardList = document.querySelector(".deck").getElementsByTagName("div");
 
     for (let card of cardList) {
       card.classList.remove("show", "open");
@@ -120,9 +114,7 @@ class Game {
         // winModal.style.display = 'flex';
         const winString = `Yay! You win! You took ${this.moves} moves.`;
 
-        const modalText = document
-          .querySelector(".modal-body")
-          .querySelector("h6");
+        const modalText = document.querySelector(".modal-body").querySelector("h6");
         modalText.innerHTML = winString;
 
         const close = document.querySelector('.close')
@@ -137,8 +129,6 @@ class Game {
       winModalEnd.style.display = "none";
   }
 }
-
-
 
 const game = new Game();
 // game.start();

@@ -21,32 +21,41 @@ class CardManager {
 
     shuffleCards() {
         let counter = this.cards.length;
-        // console.log(counter);
+        console.log(counter);
         while (counter > 0) {
             // pick random idx
             let index = Math.floor(Math.random() * counter);
-        // console.log(index);
+        console.log(index);
             // decrement counter
             counter--;
-            // console.log(counter);
+            console.log(counter);
             // swap last element with it
             let temp = this.cards[counter];
-            // console.log(temp);
+            console.log(temp);
+            //counter(15)  = index(2)
             this.cards[counter] = this.cards[index];
-            // console.log(this.cards[counter]);
-            // console.log(this.cards[index]);
+            console.log(this.cards[counter]);
+            console.log(this.cards[index]);
+            
             this.cards[index] = temp;
-            // console.log(this.cards[index]);
+            console.log(this.cards[index]);
+            console.log(temp);
+
+            // let a = 20
+            // let b = 30
+
+            // let temp = a // temp = 20
+            // a = b  // a = 30
+            // b = temp // b =20
         }
     }
 
-    attachClassToCard() {
+    attachSrcToCard() {
         const deck = document.querySelector('.deck').querySelectorAll('img');
-        let className;
-
+ 
         for (let i = 0; i < deck.length; i++) {
-            className = this.cards[i];
-            deck[i].src = className;
+            // let className = this.cards[i];
+                deck[i].src = this.cards[i];
         }
     }
 }
