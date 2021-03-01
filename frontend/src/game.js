@@ -15,27 +15,29 @@ class Game {
     this.startTimer();
     this.showMoves();
     this.onRestart();
-    this.onClick();
     this.hoverCards();
+    this.onClick();
   }
+
   hoverCards(){
     const hoverCards = document.querySelectorAll(".card")
-    
-    //    hoverCards.addEventListener('mouseover', (e) => {
-    //   console.log(e.target)
-    //  e.target.style.background = "orange";
-    // })
 
     hoverCards.forEach( (card) => {
       card.addEventListener('mouseover', (e) =>{
-        if ( e.target.style.background = "orange"){
           e.target.style.background = "pink";
-        } else {
-          e.target.style.background = "orange";
-        }
       })
     })
+
+    hoverCards.forEach( (card) => {
+      card.addEventListener('mouseout', (e) =>{
+          e.target.style.background = "url('image/bg.jpg')";
+      })
+    })
+
   }
+
+ 
+
 //   hoverCards.forEach((div) => div.addEventListener('mouseover', () =>{
 //     div.style.backgroundColor = "orange";
 //   })
