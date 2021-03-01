@@ -16,12 +16,54 @@ class Game {
     this.showMoves();
     this.onRestart();
     this.onClick();
+    this.hoverCards();
   }
+  hoverCards(){
+    const hoverCards = document.querySelectorAll(".card")
+    
+    //    hoverCards.addEventListener('mouseover', (e) => {
+    //   console.log(e.target)
+    //  e.target.style.background = "orange";
+    // })
+
+    hoverCards.forEach( (card) => {
+      card.addEventListener('mouseover', (e) =>{
+        if ( e.target.style.background = "orange"){
+          e.target.style.background = "pink";
+        } else {
+          e.target.style.background = "orange";
+        }
+      })
+    })
+  }
+//   hoverCards.forEach((div) => div.addEventListener('mouseover', () =>{
+//     div.style.backgroundColor = "orange";
+//   })
+// )
+
+    // hoverCards.addEventListener('mouseover', (e) => {
+    //   console.log(e.target)
+    //  e.target.style.background = "orange";
+    // })
+
+    // hoverCards.forEach( (card) => {
+    //   card.addEventListener('hover', (e) =>{
+    //     e.target.style.background = "orange";
+    //   })
+    // })
+
+//     const hoverCards = document.querySelector(".card")
+// hoverCards.forEach((div) => div.addEventListener('mouseover', (e) =>{
+//     e.target.style.background = "orange";
+//   })
+// )
+    
+    
 
   onClick() {
   
     const deck = document.querySelector(".deck");
-
+    
     deck.addEventListener("click", (event) => {
       if (event.target.className.includes("card")) {
         // console.log(event.target.id);
@@ -40,8 +82,8 @@ class Game {
 
   checkMatch(prevId, currId) {
     
-    // const choice1Card = document.getElementById(prevId);
-    // const choice2Card = document.getElementById(currId);
+    const choice1Card = document.getElementById(prevId);
+    const choice2Card = document.getElementById(currId);
     // // debugger
     const choice1Class = document.getElementById(prevId).querySelector("img").src;
     const choice2Class = document.getElementById(currId).querySelector("img").src;
@@ -54,7 +96,6 @@ class Game {
       this.showMoves();
 
     } else {
-      // this.wrongMoves++;
       this.showMoves();
 
       setTimeout(() => {
@@ -110,10 +151,8 @@ class Game {
         // const winModal = document.getElementById('winModal')
         // winModal.style.display = 'flex';
         const winString = `Yay! You win! You took ${this.moves} moves.`;
-
         const modalText = document.querySelector(".modal-body").querySelector("h6");
         modalText.innerHTML = winString;
-
         const close = document.querySelector('.close')
         close.addEventListener('click', () => this.close()
         );

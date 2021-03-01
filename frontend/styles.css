@@ -192,7 +192,7 @@ img.wel{
 
 .close:hover {
   cursor: pointer;
-  
+  background-color: #f55195;
 }
 
 /* .toggle{
