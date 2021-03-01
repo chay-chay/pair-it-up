@@ -24,7 +24,7 @@ class Game {
 
     deck.addEventListener("click", (event) => {
       if (event.target.className.includes("card")) {
-        console.log(event.target.id);
+        // console.log(event.target.id);
 
         event.target.classList.add("show", "open");
         this.cardClickCount++;
@@ -40,9 +40,9 @@ class Game {
 
   checkMatch(prevId, currId) {
     
-    const choice1Card = document.getElementById(prevId);
-    const choice2Card = document.getElementById(currId);
-    debugger
+    // const choice1Card = document.getElementById(prevId);
+    // const choice2Card = document.getElementById(currId);
+    // // debugger
     const choice1Class = document.getElementById(prevId).querySelector("img").src;
     const choice2Class = document.getElementById(currId).querySelector("img").src;
 
@@ -52,7 +52,7 @@ class Game {
       this.correct++;
       this.showScore();
       this.showMoves();
-      return;
+
     } else {
       // this.wrongMoves++;
       this.showMoves();

@@ -91,7 +91,7 @@ class Data {
     document.querySelector("#rank").style.display = "none";
     document.querySelector(".deck").style.display = "flex";
   
-    game.restart();
+    game.restart(); //global var can call anywhere (Jenn)
     game.startTimer() 
     let rank = document.querySelector("#rank").querySelector(".scroll").querySelector("tbody");
     rank.innerHTML = ""

@@ -26,21 +26,23 @@ class CardManager {
             // pick random idx
             let index = Math.floor(Math.random() * counter);
         console.log(index);
-            // decrement counter
+            // decrement counter to get the last inx
             counter--;
             console.log(counter);
             // swap last element with it
+            //temp = 15
             let temp = this.cards[counter];
             console.log(temp);
-            //counter(15)  = index(2)
+            //counter  = index(2) random
             this.cards[counter] = this.cards[index];
             console.log(this.cards[counter]);
             console.log(this.cards[index]);
-            
+            //index = 15
             this.cards[index] = temp;
             console.log(this.cards[index]);
+            //temp = 2
             console.log(temp);
-
+            // how to bubble swap
             // let a = 20
             // let b = 30
 
