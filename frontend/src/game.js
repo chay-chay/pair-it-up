@@ -42,12 +42,9 @@ class Game {
     
     const choice1Card = document.getElementById(prevId);
     const choice2Card = document.getElementById(currId);
-    // debugger
-    // const choice1Class = document.getElementById(prevId).getElementsByClassName('toggle')
-    // const choice2Class = document.getElementById(currId).getElementsByClassName('toggle')
+    debugger
     const choice1Class = document.getElementById(prevId).querySelector("img").src;
-    const choice2Class = document.getElementById(currId).querySelector("img")
-.src;
+    const choice2Class = document.getElementById(currId).querySelector("img").src;
 
     this.trackMoves();
 

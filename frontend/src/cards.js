@@ -54,8 +54,8 @@ class CardManager {
         const deck = document.querySelector('.deck').querySelectorAll('img');
  
         for (let i = 0; i < deck.length; i++) {
-            // let className = this.cards[i];
-                deck[i].src = this.cards[i];
+            let className = this.cards[i];
+                deck[i].src = className;
         }
     }
 }
