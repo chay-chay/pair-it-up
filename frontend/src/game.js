@@ -19,51 +19,26 @@ class Game {
     this.onClick();
   }
 
+
   hoverCards(){
     const hoverCards = document.querySelectorAll(".card")
 
-    hoverCards.forEach( (card) => {
+    hoverCards.forEach((card) => {
       card.addEventListener('mouseover', (e) =>{
-          e.target.style.background = "pink";
+          e.target.style.border = "thick solid pink";
       })
     })
 
-    hoverCards.forEach( (card) => {
+    hoverCards.forEach((card) => {
       card.addEventListener('mouseout', (e) =>{
-          e.target.style.background = "url('image/bg.jpg')";
+          e.target.style.borderColor = "";
       })
     })
 
   }
-
- 
-
-//   hoverCards.forEach((div) => div.addEventListener('mouseover', () =>{
-//     div.style.backgroundColor = "orange";
-//   })
-// )
-
-    // hoverCards.addEventListener('mouseover', (e) => {
-    //   console.log(e.target)
-    //  e.target.style.background = "orange";
-    // })
-
-    // hoverCards.forEach( (card) => {
-    //   card.addEventListener('hover', (e) =>{
-    //     e.target.style.background = "orange";
-    //   })
-    // })
-
-//     const hoverCards = document.querySelector(".card")
-// hoverCards.forEach((div) => div.addEventListener('mouseover', (e) =>{
-//     e.target.style.background = "orange";
-//   })
-// )
-    
     
 
   onClick() {
-  
     const deck = document.querySelector(".deck");
     
     deck.addEventListener("click", (event) => {
@@ -96,10 +71,8 @@ class Game {
       this.correct++;
       this.showScore();
       this.showMoves();
-
     } else {
       this.showMoves();
-
       setTimeout(() => {
         choice1Card.classList.remove("open", "show");
         choice2Card.classList.remove("open", "show");
@@ -139,10 +112,12 @@ class Game {
     $("#winModal").modal("hide");
 
     const cardList = document.querySelector(".deck").getElementsByTagName("div");
-
+    
     for (let card of cardList) {
       card.classList.remove("show", "open");
     }
+  
+    
   }
 
   showScore() {

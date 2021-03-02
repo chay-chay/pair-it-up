@@ -54,6 +54,7 @@ h1 {
 img{
   width:80px;
   height: 80px;
+  border-radius: 8px;
 }
 
 
@@ -94,6 +95,7 @@ img{
 
 .deck .card img{
   display:none;
+  cursor: pointer;
 }
 
 .deck .card.open img{
@@ -106,9 +108,7 @@ img{
   cursor: default;
 }
 
-/* .deck .card.show {
-  font-size: 33px;
-}
+/*
 
 .deck .card.match {
   cursor: default;

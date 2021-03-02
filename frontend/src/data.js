@@ -6,13 +6,13 @@ class Data {
   }
 
   submit() {
-    // $("#winModal").modal("show"); // user for debug
+    // $("#winModal").modal("show"); // use for debug
     const submit = document.querySelector(".submit");
     submit.addEventListener("click", () => this.handleSubmit());
   }
 
   handleSubmit() {
-    console.log(`${this.BASE_URL}/topten`);
+    // console.log(`${this.BASE_URL}/topten`);
     const name = document.querySelector("#name").value;
     const moves = document.querySelector(".moves");
 
@@ -57,6 +57,7 @@ class Data {
     return fetch(`${this.BASE_URL}/topten`) // make get request to a server and get back response
       .then((response) => response.json())
       .then((data) => {
+        // debugger
         console.log(this);
         this.getScore(data);
       });
@@ -64,9 +65,10 @@ class Data {
 
   getScore(scores) {
     console.log(scores);
+    // scores.sort();
+    // scores.reverse();
     scores.forEach((e) => {
-      let html = document.querySelector("#rank").querySelector(".scroll").querySelector("tbody");
-      
+      let html = document.querySelector("#rank").querySelector(".scroll").querySelector("tbody"); 
       html.innerHTML += `
        <tr>
           <td>${e.rank}</td>
