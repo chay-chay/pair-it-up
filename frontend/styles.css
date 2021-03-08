@@ -2,6 +2,30 @@ html {
   font-family: 'Comfortaa', sans-serif;
   box-sizing: border-box;
 }
+/* 
+@font-face {
+  font-family: 'Comfortaa';
+  font-display: auto;
+  font-style: thin;
+  font-weight: 100;
+  src: local('Comfortaa'),
+    url('./fonts/Comfortaa/static/Comfortaa-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-display: auto;
+  font-weight: 400;
+  src: local('Comfortaa'),
+    url('./fonts/Comfortaa/static/Comfortaa-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-display: auto;
+  font-style: bold;
+  font-weight: 700;
+  src: local('Comfortaa'),
+    url('./fonts/Comfortaa/static/Comfortaa-Bold.ttf') format('truetype');
+} */
 
 *,
 *::before,

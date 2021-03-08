@@ -17,11 +17,12 @@ class Game {
     this.onRestart();
     this.hoverCards();
     this.onClick();
+    
   }
-
 
   hoverCards(){
     const hoverCards = document.querySelectorAll(".card")
+    // const hoverCards = document.querySelector(".card")
 
     hoverCards.forEach((card) => {
       card.addEventListener('mouseover', (e) =>{

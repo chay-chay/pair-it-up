@@ -1,6 +1,7 @@
 class Data {
   constructor() {
-    this.BASE_URL = "http://localhost:3000";
+    // this.BASE_URL = "http://localhost:3000";
+    this.BASE_URL = "https://shrouded-basin-97764.herokuapp.com";
     this.submit;
     this.restartButton();
   }
