@@ -12,7 +12,7 @@ Pair It Up! is a matching game where players compete to see if they can make mat
 
 ## Get started!
 
-Click on the link to run the live game [heroku] *need to upload on Heroku after the assessment. 
+Click on the link to run the live game [https://pair-it-up.netlify.app].
 
 ## My blog & Walkthrough video
 
