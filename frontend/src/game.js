@@ -124,7 +124,7 @@ class Game {
   showScore() {
     if (this.correct === 8) {
       setTimeout(() => {
-        debugger
+        // debugger
         $("#winModal").modal("show");
         clearInterval(this.timer);
         // const winModal = document.getElementById('winModal')
