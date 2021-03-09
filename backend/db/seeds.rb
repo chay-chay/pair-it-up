@@ -8,5 +8,5 @@
 
 10.times do
     user = User.create(name: Faker::Name.first_name)
-    user.scores << Score.create(number: rand(13...25))
+    user.scores << Score.create(number: rand(15...25))
 end
